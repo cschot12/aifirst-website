@@ -83,7 +83,7 @@ function Navigation({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen }
             <img 
               src={darkMode ? logoDark : logoFull} 
               alt="AI First" 
-              className="h-16 md:h-20 transition-transform group-hover:scale-110"
+              className="h-10 transition-transform group-hover:scale-110"
             />
           </Link>
 
@@ -869,7 +869,7 @@ function Footer({ darkMode }) {
             <img 
               src={darkMode ? logoDark : logoFull} 
               alt="AI First" 
-              className="h-14 mb-4"
+              className="h-10 mb-4"
             />
             <p className="text-muted-foreground text-sm">
               Ponemos la IA primero para transformar tu negocio con soluciones innovadoras.
