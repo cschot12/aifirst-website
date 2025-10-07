@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea.jsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import './App.css'
 
-import heroImage from './assets/hero-unique.jpg'
+import heroImage from './assets/hero-friday.jpg'
 import servicesImage from './assets/services-unique.jpg'
 import aboutImage from './assets/about-unique.jpg'
 import logoFull from './assets/aifirst-logo-full-color.png'
@@ -157,7 +157,7 @@ function HomePage({ darkMode }) {
               alt="AI First Team" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/20 to-background/10"></div>
           </motion.div>
         </div>
 
