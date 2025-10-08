@@ -8,6 +8,9 @@ import { Textarea } from '@/components/ui/textarea.jsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import './App.css'
 
+import BlogPage from './pages/BlogPage.jsx'
+import BlogPostPage from './pages/BlogPostPage.jsx'
+
 import heroImage from './assets/hero-friday.jpg'
 import servicesImage from './assets/services-unique.jpg'
 import aboutImage from './assets/about-unique.jpg'
@@ -34,7 +37,7 @@ function MainApp() {
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [darkMode])
+  }, [darkMode, location])
 
   useEffect(() => {
     setMobileMenuOpen(false)
@@ -55,6 +58,8 @@ function MainApp() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:postId" element={<BlogPostPage />} />
       </Routes>
 
       <Footer darkMode={darkMode} />
@@ -83,7 +88,7 @@ function Navigation({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen }
             <img 
               src={darkMode ? logoDark : logoFull} 
               alt="AI First" 
-              className="h-10 transition-transform group-hover:scale-110"
+              className="h-16 transition-transform group-hover:scale-110"
             />
           </Link>
 
@@ -91,6 +96,7 @@ function Navigation({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen }
             <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">Inicio</Link>
             <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">Nosotros</Link>
             <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">Servicios</Link>
+            <Link to="/blog" className="text-foreground hover:text-primary transition-colors font-medium">Blog</Link>
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">Contacto</Link>
           </div>
 
@@ -131,6 +137,7 @@ function Navigation({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen }
             <Link to="/" className="block py-2 text-foreground hover:text-primary transition-colors font-medium">Inicio</Link>
             <Link to="/about" className="block py-2 text-foreground hover:text-primary transition-colors font-medium">Nosotros</Link>
             <Link to="/services" className="block py-2 text-foreground hover:text-primary transition-colors font-medium">Servicios</Link>
+            <Link to="/blog" className="block py-2 text-foreground hover:text-primary transition-colors font-medium">Blog</Link>
             <Link to="/contact" className="block py-2 text-foreground hover:text-primary transition-colors font-medium">Contacto</Link>
             <Button asChild className="w-full gradient-bg-first border-0">
               <Link to="/contact">Comenzar</Link>
@@ -176,7 +183,7 @@ function HomePage({ darkMode }) {
               </div>
               
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
-                <span className="gradient-text-first text-glow">Transformamos</span>
+                <span className="gradient-text-first">Transformamos</span>
                 <br />
                 <span className="text-foreground">Tu Negocio con IA</span>
               </h1>
@@ -419,7 +426,7 @@ function HomePage({ darkMode }) {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              ¿Listo para <span className="gradient-text-first text-glow">Despegar</span>?
+              ¿Listo para <span className="gradient-text-first">Despegar</span>?
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               Únete a las empresas líderes que ya están transformando su futuro con AI First. Tu próxima gran innovación comienza aquí.
@@ -881,7 +888,7 @@ function Footer({ darkMode }) {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/about" className="hover:text-primary transition-colors">Nosotros</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">Servicios</Link></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
               <li><a href="#" className="hover:text-primary transition-colors">Carreras</a></li>
             </ul>
           </div>
