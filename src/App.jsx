@@ -178,18 +178,18 @@ function HomePage({ darkMode }) {
             >
               <div className="inline-block">
                 <span className="px-4 py-2 rounded-full gradient-bg-first text-white text-sm font-semibold">
-                  🚀 IA Primero, Resultados Siempre
+                  🚀 Acelera tu futuro con AI
                 </span>
               </div>
               
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
                 <span className="gradient-text-first">Transformamos</span>
                 <br />
-                <span className="text-foreground">Tu Negocio con IA</span>
+                <span className="text-foreground">tu negocio con AI</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                Ponemos la inteligencia artificial en el centro de tu estrategia. Somos expertos que priorizan la IA para convertir desafíos complejos en soluciones innovadoras que impulsan el crecimiento real.
+                  Ponemos la inteligencia artificial en el centro de tu estrategia, con un enfoque en la evaluación de procesos. Somos expertos que priorizan la AI para convertir desafíos complejos en soluciones innovadoras que impulsan el crecimiento real.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -204,9 +204,9 @@ function HomePage({ darkMode }) {
               </div>
 
               <div className="flex items-center gap-8 pt-4">
-                <div>
-                  <div className="text-3xl font-bold gradient-text-first">500+</div>
-                  <div className="text-sm text-muted-foreground">Proyectos</div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold gradient-text-first">10+</div>
+                  <div className="text-sm text-muted-foreground">Años de experiencia</div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div>
