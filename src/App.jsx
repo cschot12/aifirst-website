@@ -389,9 +389,9 @@ function HomePage({ darkMode }) {
               className="grid grid-cols-2 gap-6"
             >
               {[
-                { number: '15+', label: 'Años Experiencia', icon: Award },
-                { number: '50+', label: 'Expertos IA', icon: Users },
-                { number: '200+', label: 'Empresas', icon: Target },
+                { number: '10+', label: 'Años Experiencia', icon: Award },
+                { number: '70%', label: 'Procesos optimizados', icon: Users },
+                { number: '100%', label: 'Satisfacción', icon: Target },
                 { number: '99%', label: 'Éxito', icon: TrendingUp },
               ].map((stat, index) => (
                 <motion.div
@@ -828,8 +828,8 @@ function ContactPage() {
                 <div className="space-y-6">
                   {[
                     { icon: Mail, title: 'Email', content: ['hola@aifirst.com', 'soporte@aifirst.com'] },
-                    { icon: Phone, title: 'Teléfono', content: ['+1 (555) 123-4567', 'Lun-Vie, 9am-6pm EST'] },
-                    { icon: MapPin, title: 'Oficina', content: ['123 Innovation Drive', 'San Francisco, CA 94105'] },
+                    { icon: Phone, title: 'Teléfono', content: ['+56 9761 93 937', 'Lun-Vie, 9am-6pm EST'] },
+                    { icon: MapPin, title: 'Oficina', content: ['Santiago, Chile'] },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start space-x-4">
                       <div className="w-14 h-14 rounded-xl gradient-bg-first flex items-center justify-center flex-shrink-0">
@@ -912,11 +912,11 @@ function Footer({ darkMode }) {
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+59 9761 93 937</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Santiago, Chile</span>
               </li>
             </ul>
           </div>
